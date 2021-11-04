@@ -1,0 +1,74 @@
+/*color*/
+
+$color-primary: #212529;
+$color-secondary: #495057;
+$color-thertiary: #e9ecef;
+$color-thertiary-light: #f8f9fa;
+$white: #ffffff;
+
+//responsive breakpoint
+$bp-largest: 75em; //1200px/16px
+$bp-large: 62.5em; //1000px/16px
+$bp-medium: 50em; //800/16
+$bp-small: 37.5em;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px 62.5=1 px =1 rem
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #212529;
+  overflow-x: hidden;
+  font-family: "atkinsonregular", sans-serif;
+  font-weight: 100;
+  width: 100vw;
+  height: 100vh;
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: $white;
+    background: $color-primary;
+  }
+
+  ::selection {
+    color: $white;
+    background: $color-primary;
+  }
+}
+.bold {
+  font-family: "atkinsonbold";
+  font-weight: 100;
+}
+.scroll__container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+}
+
+/////////////////////////////////////
+
+@mixin screen-min($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+@mixin screen-max($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+@mixin screen-max-land($max) {
+  @media (max-height: $max) {
+    @content;
+  }
+}
