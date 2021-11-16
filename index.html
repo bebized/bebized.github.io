@@ -35,11 +35,9 @@
     <div class="scroll__container">
       <nav class="navigation">
         <ul class="nav-menu">
-
           <li class="nav-item">
             <a href="#home" class="nav-link heading__secondary">Home</a>
           </li>
-
 
           <li class="nav-item">
             <a href="#skills" class="nav-link heading__secondary">Skills</a>
@@ -48,13 +46,18 @@
             <a href="#projects" class="nav-link heading__secondary">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#Contact" class="nav-link heading__secondary">Contact</a>
+            <a href="#contact" class="nav-link heading__secondary">Contact</a>
           </li>
 
           <li class="nav-item">
-            <a href="href="https://github.com/bebized"" class="nav-link heading__secondary" target="newblank"> <i class="uil uil-github"></i> </a>
+            <a
+              href="https://github.com/bebized/bebized"
+              class="nav-link heading__secondary"
+              target="newblank"
+            >
+              <i class="uil uil-github"></i>
+            </a>
           </li>
-
         </ul>
 
         <div class="hamburger">
@@ -205,12 +208,13 @@
         <div class="contact__footer-contacts">
           <p class="paragraph contact__footer-mail">
             <details class="paragraph contact__footer-mail">
-              <summary>click to show the mail <i class="uil uil-envelope-alt"></i></summary>
+              <summary>
+                click to show the mail <i class="uil uil-envelope-alt"></i>
+              </summary>
               <ul class="contact__footer-list">
-                  <li class="contact__footer-list-item">zanella.b@outlook.com
-                  </li>
+                <li class="contact__footer-list-item">zanella.b@outlook.com</li>
               </ul>
-          </details>
+            </details>
           </p>
         </div>
         <p class="paragraph contact__footer-copyright">
@@ -218,26 +222,26 @@
         </p>
       </footer>
     </div>
-<!--script per attivare il menu e chiuderlo nel click sul link-->
+    <!--script per attivare il menu e chiuderlo nel click sul link-->
 
-    <script>const hamburger = document.querySelector(".hamburger");
+    <script>
+      const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
-      
+
       hamburger.addEventListener("click", mobileMenu);
-      
+
       function mobileMenu() {
-          hamburger.classList.toggle("active");
-          navMenu.classList.toggle("active");
-      } 
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
       const navLink = document.querySelectorAll(".nav-link");
 
-navLink.forEach(n => n.addEventListener("click", closeMenu));
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
-      
-</script>
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    </script>
   </body>
 </html>
