@@ -13,35 +13,34 @@
   </head>
   <body>
     <nav class="navigation">
-      <input id="nav-toggle" type="checkbox" />
-      <div></div>
+      <ul class="nav-menu">
 
-      <ul class="navigation__list">
-        <li class="navigation__list-item">
-          <a class="navigation__list-item-link" href="index.html#home">Home</a>
+        <li class="nav-item">
+          <a href="#home" class="nav-link heading__secondary">Home</a>
         </li>
-        <li class="navigation__list-item">
-          <a class="navigation__list-item-link" href="index.html#skills"
-            >Skills</a
-          >
+
+
+        <li class="nav-item">
+          <a href="#skills" class="nav-link heading__secondary">Skills</a>
         </li>
-        <li class="navigation__list-item">
-          <a class="navigation__list-item-link" href="index.html#projects"
-            >Projects</a
-          >
+        <li class="nav-item">
+          <a href="#projects" class="nav-link heading__secondary">Projects</a>
         </li>
-        <li class="navigation__list-item">
-          <a class="navigation__list-item-link" href="index.html#contact"
-            >Contact</a
-          >
+        <li class="nav-item">
+          <a href="#Contact" class="nav-link heading__secondary">Contact</a>
         </li>
+
+        <li class="nav-item">
+          <a href="href="https://github.com/bebized"" class="nav-link heading__secondary" target="newblank"> <i class="uil uil-github"></i> </a>
+        </li>
+
       </ul>
 
-      <label for="nav-toggle" class="navigation__icon-burger">
-        <div class="navigation__icon-burger-line"></div>
-        <div class="navigation__icon-burger-line2"></div>
-        <div class="navigation__icon-burger-line"></div>
-      </label>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
     <section class="about" id="about">
       <div class="about__container">
@@ -120,5 +119,25 @@
         </nav>
       </div>
     </section>
+
+    <script>const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      
+      hamburger.addEventListener("click", mobileMenu);
+      
+      function mobileMenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+      } 
+      const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+      
+</script>
   </body>
 </html>
